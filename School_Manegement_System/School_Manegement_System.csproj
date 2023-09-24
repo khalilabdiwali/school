@@ -1,0 +1,692 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C720CCF6-0FC3-42F4-9BF4-55583DA7A516}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>School_Manegement_System</RootNamespace>
+    <AssemblyName>School_Manegement_System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1537.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1537.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dashboardfrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboardfrom.Designer.cs">
+      <DependentUpon>dashboardfrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Examform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examform.Designer.cs">
+      <DependentUpon>Examform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="homeform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="homeform.Designer.cs">
+      <DependentUpon>homeform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="levelRegestration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="levelRegestration.Designer.cs">
+      <DependentUpon>levelRegestration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loading.Designer.cs">
+      <DependentUpon>loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginform.Designer.cs">
+      <DependentUpon>loginform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainClass.cs" />
+    <Compile Include="primaryExamform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="primaryExamform.Designer.cs">
+      <DependentUpon>primaryExamform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="primaryReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="primaryReportForm.Designer.cs">
+      <DependentUpon>primaryReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report.Designer.cs">
+      <DependentUpon>report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SCHOOL_MANEG_SYSTEMDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="secondaryExamform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="secondaryExamform.Designer.cs">
+      <DependentUpon>secondaryExamform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="studentRegisterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentRegisterform.Designer.cs">
+      <DependentUpon>studentRegisterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userform.Designer.cs">
+      <DependentUpon>userform.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="dashboardfrom.resx">
+      <DependentUpon>dashboardfrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examform.resx">
+      <DependentUpon>Examform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="homeform.resx">
+      <DependentUpon>homeform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="levelRegestration.resx">
+      <DependentUpon>levelRegestration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loading.resx">
+      <DependentUpon>loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginform.resx">
+      <DependentUpon>loginform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="primaryExamform.resx">
+      <DependentUpon>primaryExamform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrimaryReport.rdlc" />
+    <EmbeddedResource Include="primaryReportForm.resx">
+      <DependentUpon>primaryReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="report.resx">
+      <DependentUpon>report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="secondaryExamform.resx">
+      <DependentUpon>secondaryExamform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentRegisterform.resx">
+      <DependentUpon>studentRegisterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentReports.rdlc" />
+    <EmbeddedResource Include="userform.resx">
+      <DependentUpon>userform.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet1.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet1.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet10.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet10.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet11.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet11.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet12.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet12.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet13.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet13.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet14.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet14.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet15.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet15.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet16.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet16.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet17.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet17.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet18.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet18.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet19.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet19.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet2.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet2.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet20.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet20.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet3.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet3.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet4.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet4.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet5.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet5.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet6.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet6.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet7.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet7.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet8.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet8.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet9.xsc">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SCHOOL_MANEG_SYSTEMDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SCHOOL_MANEG_SYSTEMDataSet9.xss">
+      <DependentUpon>SCHOOL_MANEG_SYSTEMDataSet9.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Male_User_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_student_male_80px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_student_male_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_student_registration_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_student_male_80px_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_report_card_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_report_card_64px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_student_male_80px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_report_card_64px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_student_registration_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khalil.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_password_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_password_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sofyo logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_24px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_password_30px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ussee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bruno-rodrigues-279xIHymPYY-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_scorecard_24px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_scorecard_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_writer_male_24px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_writer_male_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_male_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview %2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview %2813%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_24px_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\284704484_1180564809397680_9171941717529447995_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_school_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Books_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_combo_chart_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview-%2817%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\levelResgister.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\primaryExam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secondaryExam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secondary-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_500px.png" />
+    <None Include="Resources\icons8_report_card_24px.png" />
+    <None Include="Resources\icons8_edit_graph_report_24px.png" />
+    <None Include="Resources\download.jpg" />
+    <None Include="Resources\icons8_add_user_male_64px.png" />
+    <None Include="Resources\icons8_user_50px1.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

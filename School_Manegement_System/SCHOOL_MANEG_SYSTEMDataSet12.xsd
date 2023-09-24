@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SCHOOL_MANEG_SYSTEMDataSet12" targetNamespace="http://tempuri.org/SCHOOL_MANEG_SYSTEMDataSet12.xsd" xmlns:mstns="http://tempuri.org/SCHOOL_MANEG_SYSTEMDataSet12.xsd" xmlns="http://tempuri.org/SCHOOL_MANEG_SYSTEMDataSet12.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SCHOOL_MANEG_SYSTEMConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SCHOOL_MANEG_SYSTEMConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.School_Manegement_System.Properties.Settings.GlobalReference.Default.SCHOOL_MANEG_SYSTEMConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LevelRegesterViewTableAdapter" GeneratorDataComponentClassName="LevelRegesterViewTableAdapter" Name="LevelRegesterView" UserDataComponentName="LevelRegesterViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SCHOOL_MANEG_SYSTEMConnectionString (Settings)" DbObjectName="SCHOOL_MANEG_SYSTEM.dbo.LevelRegesterView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Level_id, Std_Name, Class, Level_Sch, Academic_Year FROM dbo.LevelRegesterView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Level_id" DataSetColumn="Level_id" />
+              <Mapping SourceColumn="Std_Name" DataSetColumn="Std_Name" />
+              <Mapping SourceColumn="Class" DataSetColumn="Class" />
+              <Mapping SourceColumn="Level_Sch" DataSetColumn="Level_Sch" />
+              <Mapping SourceColumn="Academic_Year" DataSetColumn="Academic_Year" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SCHOOL_MANEG_SYSTEMDataSet12" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="SCHOOL_MANEG_SYSTEMDataSet12" msprop:Generator_DataSetName="SCHOOL_MANEG_SYSTEMDataSet12">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LevelRegesterView" msprop:Generator_RowEvHandlerName="LevelRegesterViewRowChangeEventHandler" msprop:Generator_RowDeletedName="LevelRegesterViewRowDeleted" msprop:Generator_RowDeletingName="LevelRegesterViewRowDeleting" msprop:Generator_RowEvArgName="LevelRegesterViewRowChangeEvent" msprop:Generator_TablePropName="LevelRegesterView" msprop:Generator_RowChangedName="LevelRegesterViewRowChanged" msprop:Generator_RowChangingName="LevelRegesterViewRowChanging" msprop:Generator_TableClassName="LevelRegesterViewDataTable" msprop:Generator_RowClassName="LevelRegesterViewRow" msprop:Generator_TableVarName="tableLevelRegesterView" msprop:Generator_UserTableName="LevelRegesterView">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Level_id" msprop:Generator_ColumnPropNameInRow="Level_id" msprop:Generator_ColumnPropNameInTable="Level_idColumn" msprop:Generator_ColumnVarNameInTable="columnLevel_id" msprop:Generator_UserColumnName="Level_id" type="xs:int" />
+              <xs:element name="Std_Name" msprop:Generator_ColumnPropNameInRow="Std_Name" msprop:Generator_ColumnPropNameInTable="Std_NameColumn" msprop:Generator_ColumnVarNameInTable="columnStd_Name" msprop:Generator_UserColumnName="Std_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Class" msprop:Generator_ColumnPropNameInRow="Class" msprop:Generator_ColumnPropNameInTable="ClassColumn" msprop:Generator_ColumnVarNameInTable="columnClass" msprop:Generator_UserColumnName="Class">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Level_Sch" msprop:Generator_ColumnPropNameInRow="Level_Sch" msprop:Generator_ColumnPropNameInTable="Level_SchColumn" msprop:Generator_ColumnVarNameInTable="columnLevel_Sch" msprop:Generator_UserColumnName="Level_Sch" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Academic_Year" msprop:Generator_ColumnPropNameInRow="Academic_Year" msprop:Generator_ColumnPropNameInTable="Academic_YearColumn" msprop:Generator_ColumnVarNameInTable="columnAcademic_Year" msprop:Generator_UserColumnName="Academic_Year" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LevelRegesterView" />
+      <xs:field xpath="mstns:Level_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

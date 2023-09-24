@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SCHOOL_MANEG_SYSTEMDataSet14" targetNamespace="http://tempuri.org/SCHOOL_MANEG_SYSTEMDataSet14.xsd" xmlns:mstns="http://tempuri.org/SCHOOL_MANEG_SYSTEMDataSet14.xsd" xmlns="http://tempuri.org/SCHOOL_MANEG_SYSTEMDataSet14.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SCHOOL_MANEG_SYSTEMConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SCHOOL_MANEG_SYSTEMConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.School_Manegement_System.Properties.Settings.GlobalReference.Default.SCHOOL_MANEG_SYSTEMConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PrimaryExamResultViewTableAdapter" GeneratorDataComponentClassName="PrimaryExamResultViewTableAdapter" Name="PrimaryExamResultView" UserDataComponentName="PrimaryExamResultViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SCHOOL_MANEG_SYSTEMConnectionString (Settings)" DbObjectName="SCHOOL_MANEG_SYSTEM.dbo.PrimaryExamResultView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PryRes_id, Std_Name, Exam_Type, Xisaab, English, Somali, Saynis, Tarbiya, Tegnology, Carabi, Total_Marks, Average, Grade FROM dbo.PrimaryExamResultView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PryRes_id" DataSetColumn="PryRes_id" />
+              <Mapping SourceColumn="Std_Name" DataSetColumn="Std_Name" />
+              <Mapping SourceColumn="Exam_Type" DataSetColumn="Exam_Type" />
+              <Mapping SourceColumn="Xisaab" DataSetColumn="Xisaab" />
+              <Mapping SourceColumn="English" DataSetColumn="English" />
+              <Mapping SourceColumn="Somali" DataSetColumn="Somali" />
+              <Mapping SourceColumn="Saynis" DataSetColumn="Saynis" />
+              <Mapping SourceColumn="Tarbiya" DataSetColumn="Tarbiya" />
+              <Mapping SourceColumn="Tegnology" DataSetColumn="Tegnology" />
+              <Mapping SourceColumn="Carabi" DataSetColumn="Carabi" />
+              <Mapping SourceColumn="Total_Marks" DataSetColumn="Total_Marks" />
+              <Mapping SourceColumn="Average" DataSetColumn="Average" />
+              <Mapping SourceColumn="Grade" DataSetColumn="Grade" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SCHOOL_MANEG_SYSTEMDataSet14" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="SCHOOL_MANEG_SYSTEMDataSet14" msprop:Generator_DataSetName="SCHOOL_MANEG_SYSTEMDataSet14">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PrimaryExamResultView" msprop:Generator_RowEvHandlerName="PrimaryExamResultViewRowChangeEventHandler" msprop:Generator_RowDeletedName="PrimaryExamResultViewRowDeleted" msprop:Generator_RowDeletingName="PrimaryExamResultViewRowDeleting" msprop:Generator_RowEvArgName="PrimaryExamResultViewRowChangeEvent" msprop:Generator_TablePropName="PrimaryExamResultView" msprop:Generator_RowChangedName="PrimaryExamResultViewRowChanged" msprop:Generator_RowChangingName="PrimaryExamResultViewRowChanging" msprop:Generator_TableClassName="PrimaryExamResultViewDataTable" msprop:Generator_RowClassName="PrimaryExamResultViewRow" msprop:Generator_TableVarName="tablePrimaryExamResultView" msprop:Generator_UserTableName="PrimaryExamResultView">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PryRes_id" msprop:Generator_ColumnPropNameInRow="PryRes_id" msprop:Generator_ColumnPropNameInTable="PryRes_idColumn" msprop:Generator_ColumnVarNameInTable="columnPryRes_id" msprop:Generator_UserColumnName="PryRes_id" type="xs:int" />
+              <xs:element name="Std_Name" msprop:Generator_ColumnPropNameInRow="Std_Name" msprop:Generator_ColumnPropNameInTable="Std_NameColumn" msprop:Generator_ColumnVarNameInTable="columnStd_Name" msprop:Generator_UserColumnName="Std_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Exam_Type" msprop:Generator_ColumnPropNameInRow="Exam_Type" msprop:Generator_ColumnPropNameInTable="Exam_TypeColumn" msprop:Generator_ColumnVarNameInTable="columnExam_Type" msprop:Generator_UserColumnName="Exam_Type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Xisaab" msprop:Generator_ColumnPropNameInRow="Xisaab" msprop:Generator_ColumnPropNameInTable="XisaabColumn" msprop:Generator_ColumnVarNameInTable="columnXisaab" msprop:Generator_UserColumnName="Xisaab" type="xs:int" />
+              <xs:element name="English" msprop:Generator_ColumnPropNameInRow="English" msprop:Generator_ColumnPropNameInTable="EnglishColumn" msprop:Generator_ColumnVarNameInTable="columnEnglish" msprop:Generator_UserColumnName="English" type="xs:int" />
+              <xs:element name="Somali" msprop:Generator_ColumnPropNameInRow="Somali" msprop:Generator_ColumnPropNameInTable="SomaliColumn" msprop:Generator_ColumnVarNameInTable="columnSomali" msprop:Generator_UserColumnName="Somali" type="xs:int" />
+              <xs:element name="Saynis" msprop:Generator_ColumnPropNameInRow="Saynis" msprop:Generator_ColumnPropNameInTable="SaynisColumn" msprop:Generator_ColumnVarNameInTable="columnSaynis" msprop:Generator_UserColumnName="Saynis" type="xs:int" />
+              <xs:element name="Tarbiya" msprop:Generator_ColumnPropNameInRow="Tarbiya" msprop:Generator_ColumnPropNameInTable="TarbiyaColumn" msprop:Generator_ColumnVarNameInTable="columnTarbiya" msprop:Generator_UserColumnName="Tarbiya" type="xs:int" />
+              <xs:element name="Tegnology" msprop:Generator_ColumnPropNameInRow="Tegnology" msprop:Generator_ColumnPropNameInTable="TegnologyColumn" msprop:Generator_ColumnVarNameInTable="columnTegnology" msprop:Generator_UserColumnName="Tegnology" type="xs:int" />
+              <xs:element name="Carabi" msprop:Generator_ColumnPropNameInRow="Carabi" msprop:Generator_ColumnPropNameInTable="CarabiColumn" msprop:Generator_ColumnVarNameInTable="columnCarabi" msprop:Generator_UserColumnName="Carabi" type="xs:int" />
+              <xs:element name="Total_Marks" msprop:Generator_ColumnPropNameInRow="Total_Marks" msprop:Generator_ColumnPropNameInTable="Total_MarksColumn" msprop:Generator_ColumnVarNameInTable="columnTotal_Marks" msprop:Generator_UserColumnName="Total_Marks" type="xs:int" minOccurs="0" />
+              <xs:element name="Average" msprop:Generator_ColumnPropNameInRow="Average" msprop:Generator_ColumnPropNameInTable="AverageColumn" msprop:Generator_ColumnVarNameInTable="columnAverage" msprop:Generator_UserColumnName="Average" type="xs:double" minOccurs="0" />
+              <xs:element name="Grade" msprop:Generator_ColumnPropNameInRow="Grade" msprop:Generator_ColumnPropNameInTable="GradeColumn" msprop:Generator_ColumnVarNameInTable="columnGrade" msprop:Generator_UserColumnName="Grade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PrimaryExamResultView" />
+      <xs:field xpath="mstns:PryRes_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
